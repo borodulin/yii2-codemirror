@@ -1,0 +1,25 @@
+{
+    "name": "conquer/codemirror",
+    "description": "Conquer codemirror widget",
+    "keywords": ["yii2", "extension", "widget"],
+    "homepage": "https://github.com/K0TAFEY/codemirror",
+    "type": "yii2-extension",
+    "license": "BSD 3-Clause",
+    "authors": [
+        {
+            "name": "Andrey Borodulin",
+            "email": "borodulin@gmail.com",
+            "homepage": "https://github.com/K0TAFEY/codemirror"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+    "require": {
+    	"php": ">=5.4.0",
+    	"yiisoft/yii2": "*",
+    	"bower-asset/codemirror": "5.1.1"
+    }
+}
