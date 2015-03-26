@@ -15,16 +15,16 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
 	
 	public function php()
 	{
-		$this->codemirrorOptions[]=Codemirror::MODE_CLIKE;
-		$this->codemirrorOptions[]=Codemirror::MODE_PHP;
-		$this->codemirrorOptions[]=Codemirror::ADDON_COMMENT;
-		$this->codemirrorOptions[]=Codemirror::ADDON_FULLSCREEN;
+		$this->codemirrorOptions[]=CodemirrorAsset::MODE_CLIKE;
+		$this->codemirrorOptions[]=CodemirrorAsset::MODE_PHP;
+		$this->codemirrorOptions[]=CodemirrorAsset::ADDON_COMMENT;
+		$this->codemirrorOptions[]=CodemirrorAsset::ADDON_FULLSCREEN;
 		return $this;
 	}
 	
 	public function registerAssets()
 	{
-		Codemirror::register($this->view, $this->codemirrorOptions);
+		CodemirrorAsset::register($this->view, $this->codemirrorOptions);
 	}
 	
 }
