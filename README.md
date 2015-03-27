@@ -1,6 +1,10 @@
-conquer/codemirror widget
+conquer/codemirror widget for Yii2 framework
 =================
 
+## Description
+
+CodeMirror is a versatile text editor implemented in JavaScript for the browser. It is specialized for editing code, and comes with a number of language modes and addons that implement more advanced editing functionality.
+For more information please visit [CodeMirror](http://codemirror.net/) 
 
 ## Installation
 
