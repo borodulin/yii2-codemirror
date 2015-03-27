@@ -1,4 +1,4 @@
-conquer/codemirror widget for Yii2 framework
+Codemirror widget for Yii2 framework
 =================
 
 ## Description
