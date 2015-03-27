@@ -1,8 +1,8 @@
 <?php
 /**
- * @link https://github.com/K0TAFEY/codemirror
+ * @link https://github.com/borodulin/codemirror
  * @copyright Copyright (c) 2015 Andrey Borodulin
- * @license https://github.com/K0TAFEY/codemirror/blob/master/LICENSE.md
+ * @license https://github.com/borodulin/codemirror/blob/master/LICENSE.md
  */
 namespace conquer\codemirror;
 
