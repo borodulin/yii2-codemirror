@@ -131,7 +131,6 @@ class CodemirrorAsset extends \yii\web\AssetBundle
 	const MODE_FORTRAN = 'MODE_FORTRAN';
 	const MODE_GAS = 'MODE_GAS';
 	const MODE_GFM = 'MODE_GFM';
-	const MODE_GFM = 'MODE_GFM';
 	const MODE_GHERKIN = 'MODE_GHERKIN';
 	const MODE_GO = 'MODE_GO';
 	const MODE_GROOVY = 'MODE_GROOVY';

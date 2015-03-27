@@ -20,6 +20,17 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
 
 	public $preset = self::PRESET_PHP;
 	
+	
+	/**
+	 * Initializes the widget.
+	 * If you override this method, make sure you call the parent implementation first.
+	 */
+	public function init()
+	{
+		parent::init();
+		
+	}
+	
 	/**
 	 * @inheritdoc
 	 */
@@ -51,7 +62,7 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
 			if(isset($preset['assets']))
 				$assets = ArrayHelper::merge($preset['assets'], $assets);
 		}
-		$settings = Json::encode($this->settings);
+		$settings = Json::encode($settings);
 		$js = "CodeMirror.fromTextArea(document.getElementById('$id'), $settings)";
 		$view->registerJs($js);
 		Codemirror::register($this->view, $assets);
