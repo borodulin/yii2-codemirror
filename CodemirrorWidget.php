@@ -72,9 +72,9 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
 	public function getPreset($name)
 	{
 		if($this->presetsDir)
-			$filename=$this->presetsDir.DIRECTORY_SEPARATOR.ucfirst($name).'Preset';
+			$filename=$this->presetsDir.DIRECTORY_SEPARATOR.ucfirst($name).'Preset.php';
 		else
-			$filename=dirname(__FILE__).DIRECTORY_SEPARATOR.'presets'.DIRECTORY_SEPARATOR.ucfirst($name).'Preset';
+			$filename=dirname(__FILE__).DIRECTORY_SEPARATOR.'presets'.DIRECTORY_SEPARATOR.ucfirst($name).'Preset.php';
 		return require $filename;
 	}
 }
