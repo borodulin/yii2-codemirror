@@ -24,7 +24,13 @@ to the ```require``` section of your `composer.json` file.
 ```php
 use conquer\codemirror\CodemirrorWidget;
 
-$form->field($model, 'code')->widget(CodemirrorWidget::className(),['preset'=>'php', 'options'=>['rows' => 20]]);
+$form->field($model, 'code')->widget(
+    CodemirrorWidget::className(),
+    [
+        'preset'=>'php',
+        'options'=>['rows' => 20],
+    ]
+);
 
 ```
 
