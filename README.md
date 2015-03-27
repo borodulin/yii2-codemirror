@@ -36,4 +36,4 @@ $form->field($model, 'code')->widget(
 
 ## License
 
-**conquer/codemirror** is released under the BSD 3-Clause License. See the bundled `LICENSE.md` for details.
+**conquer/codemirror** is released under the MIT License. See the bundled `LICENSE.md` for details.
