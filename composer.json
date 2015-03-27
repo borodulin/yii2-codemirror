@@ -21,7 +21,7 @@
     	"php": ">=5.4.0",
     	"yiisoft/yii2": "*",
     	"bower-asset/codemirror": "*"
-    }
+    },
 	"autoload": {
 		"psr-4": {
 			"conquer\\codemirror\\": ""
