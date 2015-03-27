@@ -11,7 +11,6 @@ To install, either run
 ```
 $ php composer.phar require conquer/codemirror "*"
 ```
-
 or add
 
 ```
