@@ -1,6 +1,6 @@
 <?php
 use conquer\codemirror\CodemirrorAsset;
-use yii\web\JsExpression;
+
 return [
 	'assets'=>[
 		CodemirrorAsset::ADDON_EDIT_MATCHBRACKETS,
