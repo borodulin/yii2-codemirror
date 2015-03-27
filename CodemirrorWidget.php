@@ -70,7 +70,7 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
 		$settings = Json::encode($settings);
 		$js = "CodeMirror.fromTextArea(document.getElementById('$id'), $settings)";
 		$view->registerJs($js);
-		Codemirror::register($this->view, $assets);
+		CodemirrorAsset::register($this->view, $assets);
 	}
 	
 	public function getPreset($name)

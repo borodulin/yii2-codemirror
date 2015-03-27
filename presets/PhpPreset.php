@@ -5,7 +5,7 @@ return [
 	'assets'=>[
 		CodemirrorAsset::MODE_CLIKE,
 		CodemirrorAsset::MODE_PHP,
-		CodemirrorAsset::ADDON_COMMENT_COMMENT,
+		CodemirrorAsset::ADDON_COMMENT,
 		CodemirrorAsset::ADDON_DISPLAY_FULLSCREEN,
 		CodemirrorAsset::THEME_ECLIPSE,
 	],

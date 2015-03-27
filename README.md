@@ -31,7 +31,47 @@ $form->field($model, 'code')->widget(
         'options'=>['rows' => 20],
     ]
 );
+```
 
+You can use ready-made presets, or create your own. To do this, specify the folder to your presets.
+
+```php
+use conquer\codemirror\CodemirrorWidget;
+
+$form->field($model, 'code')->widget(
+    CodemirrorWidget::className(),
+    [
+        'presetDir'=>'/path_to_your_presets',
+        'preset'=>'sql',
+    ]
+);
+```
+
+In general, you can customize the widget directly specifying its properties.
+
+```php
+use conquer\codemirror\CodemirrorWidget;
+use conquer\codemirror\CodemirrorAsset;
+
+$form->field($model, 'code')->widget(
+    CodemirrorWidget::className(),
+    [
+        'assets'=>[
+            CodemirrorAsset::MODE_CLIKE,
+            CodemirrorAsset::KEYMAP_EMACS,
+            CodemirrorAsset::ADDON_EDIT_MATCHBRACKETS,
+            CodemirrorAsset::ADDON_COMMENT,
+            CodemirrorAsset::ADDON_DIALOG_DIALOG,
+            CodemirrorAsset::ADDON_SEARCHCURSOR,
+            CodemirrorAsset::ADDON_SEARCH,
+        ],
+        'settings'=>[
+            'lineNumbers' => true,
+            'mode' => 'text/x-csrc',
+            'keyMap' => 'emacs'
+        ],
+    ]
+);
 ```
 
 ## License
