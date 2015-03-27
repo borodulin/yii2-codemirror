@@ -10,15 +10,17 @@ use yii\helpers\ArrayHelper;
 class CodemirrorWidget extends \yii\widgets\InputWidget
 {
 	
-	const PRESET_PHP = 'PHP';
-	
-	private $_presets;
+	public $presetsDir;
 	
 	public $assets=[];
 	
 	public $settings=[];
 
-	public $preset = self::PRESET_PHP;
+	/**
+	 * Preset name. php|javascript etc.
+	 * @var string
+	 */
+	public $preset;
 	
 	
 	/**
@@ -54,9 +56,8 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
 		$id = $this->options['id'];
 		$settings=$this->settings;
 		$assets=$this->assets;
-		$presets=$this->getPresets();
-		if(!empty($presets[$this->preset])){
-			$preset=$presets[$this->preset];
+		if($this->preset){
+			$preset=$this->getPreset($this->preset);
 			if(isset($preset['settings']))
 				$settings = ArrayHelper::merge($preset['settings'], $settings);
 			if(isset($preset['assets']))
@@ -68,38 +69,12 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
 		Codemirror::register($this->view, $assets);
 	}
 	
-	public function getPresets()
+	public function getPreset($name)
 	{
-		if(empty($this->_presets)){
-			$this->_presets=[
-				self::PRESET_PHP=>[
-					'assets'=>[
-						CodemirrorAsset::MODE_CLIKE,
-						CodemirrorAsset::MODE_PHP,
-						CodemirrorAsset::ADDON_COMMENT_COMMENT,
-						CodemirrorAsset::ADDON_DISPLAY_FULLSCREEN,
-						CodemirrorAsset::THEME_ECLIPSE,
-					],
-					'settings'=>[
-						'lineNumbers' => true,
-						'matchBrackets' => true,
-						'mode' => "application/x-httpd-php-open",
-						'indentUnit' => 4,
-						'indentWithTabs' => true,
-						'extraKeys' => [
-								"F11" => new JsExpression("function(cm){cm.setOption('fullScreen', !cm.getOption('fullScreen'));}"),
-								"Esc" => new JsExpression("function(cm){if(cm.getOption('fullScreen')) cm.setOption('fullScreen', false);}"),
-						],
-					],
-				],
-			];
-		}
-		return $this->_presets;
+		if($this->presetsDir)
+			$filename=$this->presetsDir.DIRECTORY_SEPARATOR.ucfirst($name).'Preset';
+		else
+			$filename=dirname(__FILE__).DIRECTORY_SEPARATOR.'presets'.DIRECTORY_SEPARATOR.ucfirst($name).'Preset';
+		return require $filename;
 	}
-	
-	public function setPresets($value)
-	{
-		$this->_presets=ArrayHelper::merge($this->getPresets(), $value);
-	}
-	
 }
