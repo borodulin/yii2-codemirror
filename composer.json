@@ -20,6 +20,6 @@
     "require": {
     	"php": ">=5.4.0",
     	"yiisoft/yii2": "*",
-    	"bower-asset/codemirror": "5.1.1"
+    	"bower-asset/codemirror": "*"
     }
 }
