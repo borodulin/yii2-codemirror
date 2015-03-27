@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * @link https://github.com/K0TAFEY/codemirror
+ * @copyright Copyright (c) 2015 Andrey Borodulin
+ * @license https://github.com/K0TAFEY/codemirror/blob/master/LICENSE.md
+ */
 namespace conquer\codemirror;
 
 use yii\web\View;
