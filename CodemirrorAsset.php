@@ -421,15 +421,17 @@ class CodemirrorAsset extends \yii\web\AssetBundle
 	// to specify the sourcePath property. Notice the @bower alias used.
 	public $sourcePath = '@bower/codemirror';
 	
-	/**
+/**
 	 * Initializes the bundle.
 	 * If you override this method, make sure you call the parent implementation in the last.
 	 */
 	public function init()
 	{
 		parent::init();
-		$this->css = array_values(array_intersect_key(self::$_css, array_flip(self::$_options)));
-		$this->js = array_values(array_intersect_key(self::$_js, array_flip(self::$_options)));
+		$this->css = array_values(array_intersect_key(self::$_css, self::$_options));
+		array_unshift($this->css, self::$_css['lib']);
+		$this->js = array_values(array_intersect_key(self::$_js, self::$_options));
+		array_unshift($this->js, self::$_js['lib']);
 	}
 	
 	/**
@@ -438,9 +440,8 @@ class CodemirrorAsset extends \yii\web\AssetBundle
 	 * @return static the registered asset bundle instance
 	 */
 	public static function register($view, $options=[])
-	{
-		self::$_options=$options;
-		self::$_options[]='lib';
+	{		
+		self::$_options=ArrayHelper::merge(self::$_options, array_flip($options));		
 		return $view->registerAssetBundle(get_called_class());
 	}
 	
