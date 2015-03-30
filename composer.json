@@ -1,7 +1,7 @@
 {
     "name": "conquer/codemirror",
     "description": "Conquer codemirror widget",
-    "keywords": ["yii2", "extension", "widget"],
+    "keywords": ["yii2", "extension", "widget", "codemirror"],
     "homepage": "https://github.com/borodulin/codemirror",
     "type": "yii2-extension",
     "license": "MIT",
