@@ -8,6 +8,9 @@ namespace conquer\codemirror;
 
 use yii\web\View;
 
+/**
+ * @link http://codemirror.net/
+ */
 class CodemirrorAsset extends \yii\web\AssetBundle
 {
 	
@@ -414,35 +417,36 @@ class CodemirrorAsset extends \yii\web\AssetBundle
 			
 	];
 	
-	private static $_options;
+	private static $_assets;
 	
 	
 	// The files are not web directory accessible, therefore we need
 	// to specify the sourcePath property. Notice the @bower alias used.
 	public $sourcePath = '@bower/codemirror';
 	
-/**
-	 * Initializes the bundle.
-	 * If you override this method, make sure you call the parent implementation in the last.
-	 */
-	public function init()
-	{
-		parent::init();
-		$this->css = array_values(array_intersect_key(self::$_css, self::$_options));
-		array_unshift($this->css, self::$_css['lib']);
-		$this->js = array_values(array_intersect_key(self::$_js, self::$_options));
-		array_unshift($this->js, self::$_js['lib']);
-	}
-	
 	/**
 	 * Registers this asset bundle with a view.
 	 * @param View $view the view to be registered with
+	 * @param array() $assets
 	 * @return static the registered asset bundle instance
 	 */
-	public static function register($view, $options=[])
+	public static function register($view, $assets=[])
 	{		
-		self::$_options=ArrayHelper::merge(self::$_options, array_flip($options));		
+		self::$_assets=ArrayHelper::merge(self::$_assets, array_flip($assets));		
 		return $view->registerAssetBundle(get_called_class());
+	}
+	
+	/**
+	 * Registers the CSS and JS files with the given view.
+	 * @param \yii\web\View $view the view that the asset files are to be registered with.
+	 */
+	public function registerAssetFiles($view)
+	{
+		$this->css = array_values(array_intersect_key(self::$_css, self::$_assets));
+		array_unshift($this->css, self::$_css['lib']);
+		$this->js = array_values(array_intersect_key(self::$_js, self::$_assets));
+		array_unshift($this->js, self::$_js['lib']);
+		parent::registerAssetFiles($view);
 	}
 	
 }
