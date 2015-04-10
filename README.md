@@ -65,7 +65,7 @@ $form->field($model, 'code')->widget(
             CodemirrorAsset::KEYMAP_EMACS,
             CodemirrorAsset::ADDON_EDIT_MATCHBRACKETS,
             CodemirrorAsset::ADDON_COMMENT,
-            CodemirrorAsset::ADDON_DIALOG_DIALOG,
+            CodemirrorAsset::ADDON_DIALOG,
             CodemirrorAsset::ADDON_SEARCHCURSOR,
             CodemirrorAsset::ADDON_SEARCH,
         ],
