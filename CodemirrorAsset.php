@@ -9,6 +9,7 @@ namespace conquer\codemirror;
 use yii\web\View;
 
 /**
+ * @author Andrey Borodulin
  * @link http://codemirror.net/
  */
 class CodemirrorAsset extends \yii\web\AssetBundle

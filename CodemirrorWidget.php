@@ -11,6 +11,9 @@ use yii\helpers\Json;
 use yii\web\JsExpression;
 use yii\helpers\ArrayHelper;
 
+/**
+ * @author Andrey Borodulin
+ */
 class CodemirrorWidget extends \yii\widgets\InputWidget
 {
 	
