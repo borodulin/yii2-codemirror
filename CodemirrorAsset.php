@@ -432,8 +432,9 @@ class CodemirrorAsset extends \yii\web\AssetBundle
 	 * @return static the registered asset bundle instance
 	 */
 	public static function register($view, $assets=[])
-	{		
-		self::$_assets=ArrayHelper::merge(self::$_assets, array_flip($assets));		
+	{	
+		// https://github.com/borodulin/yii2-codemirror/issues/1
+		self::$_assets=\yii\helpers\ArrayHelper::merge(self::$_assets, array_flip($assets));		
 		return $view->registerAssetBundle(get_called_class());
 	}
 	
