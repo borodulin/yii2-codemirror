@@ -7,6 +7,7 @@
 namespace conquer\codemirror;
 
 use yii\web\View;
+use yii\helpers\ArrayHelper;
 
 /**
  * @author Andrey Borodulin
