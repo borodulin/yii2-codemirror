@@ -267,7 +267,7 @@ class CodemirrorAsset extends \yii\web\AssetBundle
 		self::ADDON_COMMENT => 'addon/comment/comment.js',
 		self::ADDON_CONTINUECOMMENT => 'addon/comment/continuecomment.js',
 		self::ADDON_DIALOG => 'addon/dialog/dialog.js',
-		self::ADDON_DISPLAY_FULLSCREEN =>'addon/display/fullscreen.css', 
+		self::ADDON_DISPLAY_FULLSCREEN =>'addon/display/fullscreen.js', 
 		self::ADDON_DISPLAY_PANEL => 'addon/display/panel.js',
 		self::ADDON_DISPLAY_PLACEHOLDER => 'addon/display/placeholder.js',
 		self::ADDON_DISPLAY_RULERS => 'addon/display/rulers.js',
