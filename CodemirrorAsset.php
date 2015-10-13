@@ -64,6 +64,7 @@ class CodemirrorAsset extends \yii\web\AssetBundle
 	const ADDON_COMMENT = 'ADDON_COMMENT';
 	const ADDON_CONTINUECOMMENT = 'ADDON_CONTINUECOMMENT';
 	const ADDON_DIALOG = 'ADDON_DIALOG';
+	const ADDON_DISPLAY_AUTOREFRESH = 'ADDON_DISPLAY_AUTOREFRESH';
 	const ADDON_DISPLAY_FULLSCREEN = 'ADDON_DISPLAY_FULLSCREEN';
 	const ADDON_DISPLAY_PANEL = 'ADDON_DISPLAY_PANEL';
 	const ADDON_DISPLAY_PLACEHOLDER = 'ADDON_DISPLAY_PLACEHOLDER';
@@ -477,8 +478,8 @@ class CodemirrorAsset extends \yii\web\AssetBundle
 	 */
 	public static function register($view, $assets=[])
 	{	
-    self::$_assets = ArrayHelper::merge(self::$_assets, array_flip($assets));    
-    return $view->registerAssetBundle(get_called_class());
+        self::$_assets = ArrayHelper::merge(self::$_assets, array_flip($assets));    
+        return $view->registerAssetBundle(get_called_class());
 	}
 	
 	/**
@@ -487,11 +488,13 @@ class CodemirrorAsset extends \yii\web\AssetBundle
 	 */
 	public function registerAssetFiles($view)
 	{
-    $this->css = array_values(array_intersect_key(self::$_css, self::$_assets));
-    array_unshift($this->css, self::$_css['lib']);
-    $this->js = array_values(array_intersect_key(self::$_js, self::$_assets));
-    array_unshift($this->js, self::$_js['lib']);
-    parent::registerAssetFiles($view);
+	    if (is_array(self::$_assets)) {
+            $this->css = array_values(array_intersect_key(self::$_css, self::$_assets));
+            $this->js = array_values(array_intersect_key(self::$_js, self::$_assets));
+	    }
+	    array_unshift($this->css, self::$_css['lib']);
+	    array_unshift($this->js, self::$_js['lib']);
+	    parent::registerAssetFiles($view);
 	}
 	
 }
