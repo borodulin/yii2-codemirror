@@ -7,7 +7,6 @@
 namespace conquer\codemirror;
 
 use yii\helpers\Html;
-use yii\web\JsExpression;
 use yii\helpers\ArrayHelper;
 use conquer\helpers\Json;
 

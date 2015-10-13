@@ -5,22 +5,25 @@
     "homepage": "https://github.com/borodulin/yii2-codemirror",
     "type": "yii2-extension",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/borodulin/yii2-codemirror/issues",
+        "source": "https://github.com/borodulin/yii2-codemirror"
+    },
     "authors": [
         {
             "name": "Andrey Borodulin",
-            "email": "borodulin@gmail.com",
-            "homepage": "https://github.com/borodulin/yii2-codemirror"
+            "email": "borodulin@gmail.com"
         }
     ],
     "extra": {
         "branch-alias": {
-          "dev-master": "1.2.7.x-dev"
+          "dev-master": "2.0.0.x-dev"
         }
       },
     "require": {
     	"php": ">=5.4.0",
     	"yiisoft/yii2": "*",
-    	"conquer/helpers": "~1.0.0",
+    	"conquer/helpers": "~2.0.8",
     	"bower-asset/codemirror": "*"
     },
 	"autoload": {
