@@ -166,6 +166,7 @@ class CodemirrorAsset extends \yii\web\AssetBundle
     const MODE_JADE = 'MODE_JADE';
     const MODE_JAVASCRIPT = 'MODE_JAVASCRIPT';
     const MODE_JINJA2 = 'MODE_JINJA2';
+    const MODE_JSX = 'MODE_JSX';
     const MODE_JULIA = 'MODE_JULIA';
     const MODE_KOTLIN = 'MODE_KOTLIN';
     const MODE_LIVESCRIPT = 'MODE_LIVESCRIPT';
@@ -397,6 +398,7 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_JADE => 'mode/jade/jade.js',
         self::MODE_JAVASCRIPT => 'mode/javascript/javascript.js',
         self::MODE_JINJA2 => 'mode/jinja2/jinja2.js',
+        self::MODE_JSX => 'mode/jsx/jsx.js',
         self::MODE_JULIA => 'mode/julia/julia.js',
         self::MODE_KOTLIN => 'mode/kotlin/kotlin.js',
         self::MODE_LIVESCRIPT => 'mode/livescript/livescript.js',
