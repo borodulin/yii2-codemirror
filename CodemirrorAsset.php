@@ -17,8 +17,8 @@ class CodemirrorAsset extends \yii\web\AssetBundle
 {
     const KEYMAP_EMACS = 'KEYMAP_EMACS';
     const KEYMAP_SUBLIME = 'KEYMAP_SUBLIME';
-     const KEYMAP_VIM = 'KEYMAP_VIM';
-    
+    const KEYMAP_VIM = 'KEYMAP_VIM';
+
     const THEME_3024_DAY = 'THEME_3024_DAY';
     const THEME_3024_NIGHT = 'THEME_3024_NIGHT';
     const THEME_ABCDEF = 'THEME_ABCDEF';
@@ -60,7 +60,7 @@ class CodemirrorAsset extends \yii\web\AssetBundle
     const THEME_XQ_LIGHT = 'THEME_XQ_LIGHT';
     const THEME_YETI = 'THEME_YETI';
     const THEME_ZENBURN = 'THEME_ZENBURN';
-    
+
     const ADDON_COMMENT = 'ADDON_COMMENT';
     const ADDON_CONTINUECOMMENT = 'ADDON_CONTINUECOMMENT';
     const ADDON_DIALOG = 'ADDON_DIALOG';
@@ -118,8 +118,8 @@ class CodemirrorAsset extends \yii\web\AssetBundle
     const ADDON_TERN = 'ADDON_TERN';
     const ADDON_TERN_WORKER = 'ADDON_TERN_WORKER';
     const ADDON_WRAP_HARDWRAP = 'ADDON_WRAP_HARDWRAP';
-    
-    
+
+
     const MODE_APL = 'MODE_APL';
     const MODE_ASCIIARMOR = 'MODE_ASCIIARMOR';
     const MODE_ASN_1 = 'MODE_ASN_1';
@@ -232,8 +232,8 @@ class CodemirrorAsset extends \yii\web\AssetBundle
     const MODE_XQUERY = 'MODE_XQUERY';
     const MODE_YAML = 'MODE_YAML';
     const MODE_Z80 = 'MODE_Z80';
-    
-    private static $_css=[
+
+    private static $_css = [
         'lib' => 'lib/codemirror.css',
         self::THEME_3024_DAY => 'theme/3024-day.css',
         self::THEME_3024_NIGHT => 'theme/3024-night.css',
@@ -275,7 +275,7 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::THEME_XQ_LIGHT => 'theme/xq-light.css',
         self::THEME_YETI => 'theme/yeti.css',
         self::THEME_ZENBURN => 'theme/zenburn.css',
-            
+
         self::ADDON_DIALOG => 'addon/dialog/dialog.css',
         self::ADDON_DISPLAY_FULLSCREEN => 'addon/display/fullscreen.css',
         self::ADDON_FOLD_FOLDGUTTER => 'addon/fold/foldgutter.css',
@@ -285,18 +285,18 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::ADDON_SCROLL_SIMPLESCROLLBARS => 'addon/scroll/simplescrollbars.css',
         self::ADDON_SEARCH_MATCHESONSCROLLBAR => 'addon/search/matchesonscrollbar.css',
         self::ADDON_TERN => 'addon/tern/tern.css',
-        
+
         self::MODE_TIDDLYWIKI => 'mode/tiddlywiki/tiddlywiki.css',
-        self::MODE_TIKI    => 'mode/tiki/tiki.css',
+        self::MODE_TIKI => 'mode/tiki/tiki.css',
     ];
-    
-    private static $_js=[
+
+    private static $_js = [
         'lib' => 'lib/codemirror.js',
         self::ADDON_COMMENT => 'addon/comment/comment.js',
         self::ADDON_CONTINUECOMMENT => 'addon/comment/continuecomment.js',
         self::ADDON_DIALOG => 'addon/dialog/dialog.js',
-        self::ADDON_DISPLAY_AUTOREFRESH =>'addon/display/autorefresh.js',
-        self::ADDON_DISPLAY_FULLSCREEN =>'addon/display/fullscreen.js', 
+        self::ADDON_DISPLAY_AUTOREFRESH => 'addon/display/autorefresh.js',
+        self::ADDON_DISPLAY_FULLSCREEN => 'addon/display/fullscreen.js',
         self::ADDON_DISPLAY_PANEL => 'addon/display/panel.js',
         self::ADDON_DISPLAY_PLACEHOLDER => 'addon/display/placeholder.js',
         self::ADDON_DISPLAY_RULERS => 'addon/display/rulers.js',
@@ -381,7 +381,7 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_ERLANG => 'mode/erlang/erlang.js',
         self::MODE_FACTOR => 'mode/factor/factor.js',
         self::MODE_FORTH => 'mode/forth/forth.js',
-        self::MODE_FORTRAN     => 'mode/fortran/fortran.js',
+        self::MODE_FORTRAN => 'mode/fortran/fortran.js',
         self::MODE_GAS => 'mode/gas/gas.js',
         self::MODE_GFM => 'mode/gfm/gfm.js',
         self::MODE_GHERKIN => 'mode/gherkin/gherkin.js',
@@ -411,7 +411,7 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_MSCGEN => 'mode/modelica/mscgen.js',
         self::MODE_MUMPS => 'mode/modelica/mumps.js',
         self::MODE_NGINX => 'mode/nginx/nginx.js',
-        self::MODE_NTRIPLES    => 'mode/ntriples/ntriples.js',
+        self::MODE_NTRIPLES => 'mode/ntriples/ntriples.js',
         self::MODE_OCTAVE => 'mode/octave/octave.js',
         self::MODE_OZ => 'mode/oz/oz.js',
         self::MODE_PASCAL => 'mode/pascal/pascal.js',
@@ -426,8 +426,8 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_R => 'mode/r/r.js',
         self::MODE_RPM => 'mode/rpm/rpm.js',
         self::MODE_RST => 'mode/rst/rst.js',
-        self::MODE_RUBY    => 'mode/ruby/ruby.js',
-        self::MODE_RUST    => 'mode/rust/rust.js',
+        self::MODE_RUBY => 'mode/ruby/ruby.js',
+        self::MODE_RUST => 'mode/rust/rust.js',
         self::MODE_SASS => 'mode/sass/sass.js',
         self::MODE_SCHEME => 'mode/scheme/scheme.js',
         self::MODE_SHELL => 'mode/shell/shell.js',
@@ -435,20 +435,20 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_SLIM => 'mode/slim/slim.js',
         self::MODE_SMALLTALK => 'mode/smalltalk/smalltalk.js',
         self::MODE_SMARTY => 'mode/smarty/smarty.js',
-        self::MODE_SOLR    => 'mode/solr/solr.js',
+        self::MODE_SOLR => 'mode/solr/solr.js',
         self::MODE_SOY => 'mode/soy/soy.js',
         self::MODE_SPARQL => 'mode/sparql/sparql.js',
         self::MODE_SPREADSHEET => 'mode/spreadsheet/spreadsheet.js',
         self::MODE_SQL => 'mode/sql/sql.js',
-        self::MODE_STEX    => 'mode/stex/stex.js',
+        self::MODE_STEX => 'mode/stex/stex.js',
         self::MODE_STYLUS => 'mode/stylus/stylus.js',
         self::MODE_SWIFT => 'mode/swift/swift.js',
         self::MODE_TCL => 'mode/tcl/tcl.js',
         self::MODE_TEXTILE => 'mode/textile/textile.js',
         self::MODE_TIDDLYWIKI => 'mode/tiddlywiki/tiddlywiki.js',
-        self::MODE_TIKI    => 'mode/tiki/tiki.js',
+        self::MODE_TIKI => 'mode/tiki/tiki.js',
         self::MODE_TOML => 'mode/toml/toml.js',
-        self::MODE_TORNADO    => 'mode/tornado/tornado.js',
+        self::MODE_TORNADO => 'mode/tornado/tornado.js',
         self::MODE_TROFF => 'mode/troff/troff.js',
         self::MODE_TTCN => 'mode/ttcn/ttcn.js',
         self::MODE_TTCN_CFG => 'mode/ttcn/ttcn-cfg.js',
@@ -456,8 +456,8 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_TWIG => 'mode/twig/twig.js',
         self::MODE_VB => 'mode/vb/vb.js',
         self::MODE_VBSCRIPT => 'mode/vbscript/vbscript.js',
-        self::MODE_VELOCITY    => 'mode/velocity/velocity.js',
-        self::MODE_VERILOG    => 'mode/verilog/verilog.js',
+        self::MODE_VELOCITY => 'mode/velocity/velocity.js',
+        self::MODE_VERILOG => 'mode/verilog/verilog.js',
         self::MODE_VHDL => 'mode/vhdl/vhdl.js',
         self::MODE_VUE => 'mode/vue/vue.js',
         self::MODE_XML => 'mode/xml/xml.js',
@@ -465,14 +465,14 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_YAML => 'mode/yaml/yaml.js',
         self::MODE_Z80 => 'mode/z80/z80.js',
     ];
-    
+
     private static $_assets;
-    
-    
+
+
     // The files are not web directory accessible, therefore we need
     // to specify the sourcePath property. Notice the @bower alias used.
     public $sourcePath = '@bower/codemirror';
-    
+
     /**
      * Registers this asset bundle with a view.
      * @param View $view the view to be registered with
@@ -480,11 +480,11 @@ class CodemirrorAsset extends \yii\web\AssetBundle
      * @return static the registered asset bundle instance
      */
     public static function register($view, $assets = [])
-    {    
-        self::$_assets = ArrayHelper::merge(self::$_assets, array_flip($assets));    
+    {
+        self::$_assets = ArrayHelper::merge(self::$_assets, array_flip($assets));
         return $view->registerAssetBundle(get_called_class());
     }
-    
+
     /**
      * Registers the CSS and JS files with the given view.
      * @param \yii\web\View $view the view that the asset files are to be registered with.
