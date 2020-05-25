@@ -77,6 +77,20 @@ $form->field($model, 'code')->widget(
     ]
 );
 ```
+##### JavaScript
+For access the instance of CodeMirror from JavaScript, you can use CodeMirror.instances[] . 
+Example:
+```js
+    var instanceName = document.getElementById('textarea-id').dataset.codeMirror;
+
+    var cm = CodeMirror.instances[instanceName];
+
+    var code = cm.getValue();   // Get the current editor content
+    /*
+        cm.save();              // Copy the content of the editor into the textarea
+        cm.toTextArea();        // Remove the editor, and restore the original textarea
+    */
+```
 
 ## License
 
