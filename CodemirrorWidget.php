@@ -79,3 +79,4 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
         return require $filename;
     }
 }
+
