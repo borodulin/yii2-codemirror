@@ -24,7 +24,7 @@
     	"php": ">=5.4.0",
     	"yiisoft/yii2": "*",
     	"conquer/helpers": "~2.0.8",
-    	"bower-asset/codemirror": "*"
+    	"bower-asset/codemirror": "^5"
     },
 	"autoload": {
 		"psr-4": {
