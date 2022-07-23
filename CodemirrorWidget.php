@@ -61,10 +61,8 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
             }
         }
         $settings = Json::encode($settings);
-        $view->registerJs('CodeMirror.instances = {};');
         $instanceName = 'CM_'.preg_replace('/[^\w\d]/ius', '', $id);
-        $js = "CodeMirror.instances.{$instanceName} = CodeMirror.fromTextArea(document.getElementById('$id'), $settings);
-            document.getElementById('$id').dataset.codeMirror = '{$instanceName}';";
+        $js = "CodeMirror.fromTextArea(document.getElementById('$id'), $settings);";
         $view->registerJs($js, $view::POS_END);
         CodemirrorAsset::register($this->view, $assets);
     }
