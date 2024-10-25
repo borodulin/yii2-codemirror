@@ -63,7 +63,7 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
         $settings = Json::encode($settings);
         $instanceName = 'CM_'.preg_replace('/[^\w\d]/ius', '', $id);
         $js = "CodeMirror.fromTextArea(document.getElementById('$id'), $settings);";
-        $view->registerJs($js, $view::POS_END);
+        $view->registerJs($js, $view::POS_READY);
         CodemirrorAsset::register($this->view, $assets);
     }
 
