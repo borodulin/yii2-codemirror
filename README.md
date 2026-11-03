@@ -1,27 +1,27 @@
-Codemirror widget for Yii2 framework
-=================
+# Codemirror widget for Yii2 framework
+
+[![Latest Version](https://img.shields.io/packagist/v/conquer/codemirror.svg)](https://packagist.org/packages/conquer/codemirror)
+[![Total Downloads](https://img.shields.io/packagist/dt/conquer/codemirror.svg)](https://packagist.org/packages/conquer/codemirror)
+[![License](https://img.shields.io/packagist/l/conquer/codemirror.svg)](LICENSE.md)
 
 ## Description
 
 CodeMirror is a versatile text editor implemented in JavaScript for the browser. It is specialized for editing code, and comes with a number of language modes and addons that implement more advanced editing functionality.
 For more information please visit [CodeMirror](http://codemirror.net/) 
 
+## Requirements
+
+- PHP 7.4 or 8.x
+- Yii 2.0
+- [asset-packagist](https://asset-packagist.org) repository configured in your application's `composer.json` (standard for Yii2 app templates)
+
 ## Installation
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/). 
+Install the extension via [Composer](https://getcomposer.org):
 
-To install, either run
-
+```bash
+composer require conquer/codemirror:^2.1
 ```
-$ php composer.phar require conquer/codemirror "*"
-```
-or add
-
-```
-"conquer/codemirror": "*"
-```
-
-to the ```require``` section of your `composer.json` file.
 
 ## Usage
 
@@ -94,4 +94,4 @@ Example:
 
 ## License
 
-**conquer/codemirror** is released under the MIT License. See the bundled `LICENSE.md` for details.
+**conquer/codemirror** is released under the MIT License. See the bundled [`LICENSE.md`](LICENSE.md) for details.
