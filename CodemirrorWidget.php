@@ -6,6 +6,7 @@
  */
 namespace conquer\codemirror;
 
+use yii\base\InvalidConfigException;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use conquer\helpers\Json;
@@ -66,12 +67,24 @@ class CodemirrorWidget extends \yii\widgets\InputWidget
         CodemirrorAsset::register($this->view, $assets);
     }
 
+    /**
+     * Loads a preset file `<Name>Preset.php` from $presetsDir or from the bundled presets.
+     * @param string $name preset name, letters, digits and underscores only
+     * @return array
+     * @throws InvalidConfigException
+     */
     public function getPreset($name)
     {
+        if (!is_string($name) || !preg_match('/^\w+$/', $name)) {
+            throw new InvalidConfigException('Invalid CodeMirror preset name: ' . var_export($name, true));
+        }
         if ($this->presetsDir) {
-            $filename = $this->presetsDir . DIRECTORY_SEPARATOR . ucfirst($name) . 'Preset.php';
+            $filename = \Yii::getAlias($this->presetsDir) . DIRECTORY_SEPARATOR . ucfirst($name) . 'Preset.php';
         } else {
-            $filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'presets' . DIRECTORY_SEPARATOR . ucfirst($name) . 'Preset.php';
+            $filename = __DIR__ . DIRECTORY_SEPARATOR . 'presets' . DIRECTORY_SEPARATOR . ucfirst($name) . 'Preset.php';
+        }
+        if (!is_file($filename)) {
+            throw new InvalidConfigException("CodeMirror preset \"$name\" not found: $filename");
         }
         return require $filename;
     }

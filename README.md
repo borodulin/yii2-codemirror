@@ -20,7 +20,7 @@ For more information please visit [CodeMirror](http://codemirror.net/)
 Install the extension via [Composer](https://getcomposer.org):
 
 ```bash
-composer require conquer/codemirror:^2.1
+composer require conquer/codemirror:^2.2
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ composer require conquer/codemirror:^2.1
 use conquer\codemirror\CodemirrorWidget;
 
 $form->field($model, 'code')->widget(
-    CodemirrorWidget::className(),
+    CodemirrorWidget::class,
     [
         'preset'=>'php',
         'options'=>['rows' => 20],
@@ -43,9 +43,9 @@ You can use ready-made presets, or create your own. To do this, specify the fold
 use conquer\codemirror\CodemirrorWidget;
 
 $form->field($model, 'code')->widget(
-    CodemirrorWidget::className(),
+    CodemirrorWidget::class,
     [
-        'presetsDir'=>'/path_to_your_presets',
+        'presetsDir'=>'@app/codemirror-presets', // path or alias
         'preset'=>'sql',
     ]
 );
@@ -58,7 +58,7 @@ use conquer\codemirror\CodemirrorWidget;
 use conquer\codemirror\CodemirrorAsset;
 
 $form->field($model, 'code')->widget(
-    CodemirrorWidget::className(),
+    CodemirrorWidget::class,
     [
         'assets'=>[
             CodemirrorAsset::MODE_CLIKE,

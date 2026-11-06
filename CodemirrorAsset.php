@@ -233,6 +233,47 @@ class CodemirrorAsset extends \yii\web\AssetBundle
     const MODE_YAML = 'MODE_YAML';
     const MODE_Z80 = 'MODE_Z80';
 
+    // added in 2.2.0 (CodeMirror 5.65)
+    const THEME_ABBOTT = 'THEME_ABBOTT';
+    const THEME_AYU_DARK = 'THEME_AYU_DARK';
+    const THEME_AYU_MIRAGE = 'THEME_AYU_MIRAGE';
+    const THEME_BESPIN = 'THEME_BESPIN';
+    const THEME_DARCULA = 'THEME_DARCULA';
+    const THEME_DUOTONE_DARK = 'THEME_DUOTONE_DARK';
+    const THEME_DUOTONE_LIGHT = 'THEME_DUOTONE_LIGHT';
+    const THEME_GRUVBOX_DARK = 'THEME_GRUVBOX_DARK';
+    const THEME_HOPSCOTCH = 'THEME_HOPSCOTCH';
+    const THEME_IDEA = 'THEME_IDEA';
+    const THEME_ISOTOPE = 'THEME_ISOTOPE';
+    const THEME_JUEJIN = 'THEME_JUEJIN';
+    const THEME_LUCARIO = 'THEME_LUCARIO';
+    const THEME_MATERIAL_DARKER = 'THEME_MATERIAL_DARKER';
+    const THEME_MATERIAL_OCEAN = 'THEME_MATERIAL_OCEAN';
+    const THEME_MATERIAL_PALENIGHT = 'THEME_MATERIAL_PALENIGHT';
+    const THEME_MOXER = 'THEME_MOXER';
+    const THEME_NORD = 'THEME_NORD';
+    const THEME_OCEANIC_NEXT = 'THEME_OCEANIC_NEXT';
+    const THEME_PANDA_SYNTAX = 'THEME_PANDA_SYNTAX';
+    const THEME_RAILSCASTS = 'THEME_RAILSCASTS';
+    const THEME_SHADOWFOX = 'THEME_SHADOWFOX';
+    const THEME_SSMS = 'THEME_SSMS';
+    const THEME_YONCE = 'THEME_YONCE';
+    const MODE_CRYSTAL = 'MODE_CRYSTAL';
+    const MODE_FCL = 'MODE_FCL';
+    const MODE_HASKELL_LITERATE = 'MODE_HASKELL_LITERATE';
+    const MODE_MBOX = 'MODE_MBOX';
+    const MODE_NSIS = 'MODE_NSIS';
+    const MODE_POWERSHELL = 'MODE_POWERSHELL';
+    const MODE_PROTOBUF = 'MODE_PROTOBUF';
+    const MODE_PUG = 'MODE_PUG';
+    const MODE_SAS = 'MODE_SAS';
+    const MODE_WAST = 'MODE_WAST';
+    const MODE_WEBIDL = 'MODE_WEBIDL';
+    const MODE_YACAS = 'MODE_YACAS';
+    const MODE_YAML_FRONTMATTER = 'MODE_YAML_FRONTMATTER';
+    const ADDON_LINT_HTML_LINT = 'ADDON_LINT_HTML_LINT';
+    const ADDON_SEARCH_JUMP_TO_LINE = 'ADDON_SEARCH_JUMP_TO_LINE';
+
     private static $_css = [
         'lib' => 'lib/codemirror.css',
         self::THEME_3024_DAY => 'theme/3024-day.css',
@@ -275,6 +316,31 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::THEME_XQ_LIGHT => 'theme/xq-light.css',
         self::THEME_YETI => 'theme/yeti.css',
         self::THEME_ZENBURN => 'theme/zenburn.css',
+        self::THEME_ABBOTT => 'theme/abbott.css',
+        self::THEME_AYU_DARK => 'theme/ayu-dark.css',
+        self::THEME_AYU_MIRAGE => 'theme/ayu-mirage.css',
+        self::THEME_BESPIN => 'theme/bespin.css',
+        self::THEME_DARCULA => 'theme/darcula.css',
+        self::THEME_DUOTONE_DARK => 'theme/duotone-dark.css',
+        self::THEME_DUOTONE_LIGHT => 'theme/duotone-light.css',
+        self::THEME_GRUVBOX_DARK => 'theme/gruvbox-dark.css',
+        self::THEME_HOPSCOTCH => 'theme/hopscotch.css',
+        self::THEME_IDEA => 'theme/idea.css',
+        self::THEME_ISOTOPE => 'theme/isotope.css',
+        self::THEME_JUEJIN => 'theme/juejin.css',
+        self::THEME_LUCARIO => 'theme/lucario.css',
+        self::THEME_MATERIAL => 'theme/material.css',
+        self::THEME_MATERIAL_DARKER => 'theme/material-darker.css',
+        self::THEME_MATERIAL_OCEAN => 'theme/material-ocean.css',
+        self::THEME_MATERIAL_PALENIGHT => 'theme/material-palenight.css',
+        self::THEME_MOXER => 'theme/moxer.css',
+        self::THEME_NORD => 'theme/nord.css',
+        self::THEME_OCEANIC_NEXT => 'theme/oceanic-next.css',
+        self::THEME_PANDA_SYNTAX => 'theme/panda-syntax.css',
+        self::THEME_RAILSCASTS => 'theme/railscasts.css',
+        self::THEME_SHADOWFOX => 'theme/shadowfox.css',
+        self::THEME_SSMS => 'theme/ssms.css',
+        self::THEME_YONCE => 'theme/yonce.css',
 
         self::ADDON_DIALOG => 'addon/dialog/dialog.css',
         self::ADDON_DISPLAY_FULLSCREEN => 'addon/display/fullscreen.css',
@@ -366,6 +432,8 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_COFFEESCRIPT => 'mode/coffeescript/coffeescript.js',
         self::MODE_COMMONLISP => 'mode/commonlisp/commonlisp.js',
         self::MODE_CSS => 'mode/css/css.js',
+        self::MODE_CSS_LESS => 'mode/css/css.js', // text/x-less is defined in css
+        self::MODE_CSS_SCSS => 'mode/css/css.js', // text/x-scss is defined in css
         self::MODE_CYPHER => 'mode/cypher/cypher.js',
         self::MODE_D => 'mode/d/d.js',
         self::MODE_DART => 'mode/dart/dart.js',
@@ -395,12 +463,12 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_HTMLMIXED => 'mode/htmlmixed/htmlmixed.js',
         self::MODE_HTTP => 'mode/http/http.js',
         self::MODE_IDL => 'mode/idl/idl.js',
-        self::MODE_JADE => 'mode/jade/jade.js',
+        self::MODE_JADE => 'mode/pug/pug.js', // Jade was renamed to Pug
         self::MODE_JAVASCRIPT => 'mode/javascript/javascript.js',
         self::MODE_JINJA2 => 'mode/jinja2/jinja2.js',
         self::MODE_JSX => 'mode/jsx/jsx.js',
         self::MODE_JULIA => 'mode/julia/julia.js',
-        self::MODE_KOTLIN => 'mode/kotlin/kotlin.js',
+        self::MODE_KOTLIN => 'mode/clike/clike.js', // text/x-kotlin is defined in clike
         self::MODE_LIVESCRIPT => 'mode/livescript/livescript.js',
         self::MODE_LUA => 'mode/lua/lua.js',
         self::MODE_MARKDOWN => 'mode/markdown/markdown.js',
@@ -408,8 +476,8 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_MIRC => 'mode/mirc/mirc.js',
         self::MODE_MLLIKE => 'mode/mllike/mllike.js',
         self::MODE_MODELICA => 'mode/modelica/modelica.js',
-        self::MODE_MSCGEN => 'mode/modelica/mscgen.js',
-        self::MODE_MUMPS => 'mode/modelica/mumps.js',
+        self::MODE_MSCGEN => 'mode/mscgen/mscgen.js',
+        self::MODE_MUMPS => 'mode/mumps/mumps.js',
         self::MODE_NGINX => 'mode/nginx/nginx.js',
         self::MODE_NTRIPLES => 'mode/ntriples/ntriples.js',
         self::MODE_OCTAVE => 'mode/octave/octave.js',
@@ -451,7 +519,7 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_TORNADO => 'mode/tornado/tornado.js',
         self::MODE_TROFF => 'mode/troff/troff.js',
         self::MODE_TTCN => 'mode/ttcn/ttcn.js',
-        self::MODE_TTCN_CFG => 'mode/ttcn/ttcn-cfg.js',
+        self::MODE_TTCN_CFG => 'mode/ttcn-cfg/ttcn-cfg.js',
         self::MODE_TURTLE => 'mode/turtle/turtle.js',
         self::MODE_TWIG => 'mode/twig/twig.js',
         self::MODE_VB => 'mode/vb/vb.js',
@@ -464,6 +532,21 @@ class CodemirrorAsset extends \yii\web\AssetBundle
         self::MODE_XQUERY => 'mode/xquery/xquery.js',
         self::MODE_YAML => 'mode/yaml/yaml.js',
         self::MODE_Z80 => 'mode/z80/z80.js',
+        self::MODE_CRYSTAL => 'mode/crystal/crystal.js',
+        self::MODE_FCL => 'mode/fcl/fcl.js',
+        self::MODE_HASKELL_LITERATE => 'mode/haskell-literate/haskell-literate.js',
+        self::MODE_MBOX => 'mode/mbox/mbox.js',
+        self::MODE_NSIS => 'mode/nsis/nsis.js',
+        self::MODE_POWERSHELL => 'mode/powershell/powershell.js',
+        self::MODE_PROTOBUF => 'mode/protobuf/protobuf.js',
+        self::MODE_PUG => 'mode/pug/pug.js',
+        self::MODE_SAS => 'mode/sas/sas.js',
+        self::MODE_WAST => 'mode/wast/wast.js',
+        self::MODE_WEBIDL => 'mode/webidl/webidl.js',
+        self::MODE_YACAS => 'mode/yacas/yacas.js',
+        self::MODE_YAML_FRONTMATTER => 'mode/yaml-frontmatter/yaml-frontmatter.js',
+        self::ADDON_LINT_HTML_LINT => 'addon/lint/html-lint.js',
+        self::ADDON_SEARCH_JUMP_TO_LINE => 'addon/search/jump-to-line.js',
     ];
 
     private static $_assets;
